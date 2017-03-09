@@ -4,9 +4,21 @@ Imports System.Drawing.Imaging
 
 Public Class Form1
 
+    ''' <summary>
+    ''' timercounter
+    ''' </summary>
     Private timercounter As Integer = 0
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
     Private b As Bitmap = Nothing
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub btn_start_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_start.Click
         Try
             Me.ProgressBar1.Maximum = CInt(txt_interval.Text)
@@ -17,10 +29,18 @@ Public Class Form1
         starttimer()
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub btn_stop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_stop.Click
         stoptimer()
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
     Private Sub starttimer()
         Try
             Me.Timer1.Enabled = True
@@ -32,11 +52,17 @@ Public Class Form1
         start()
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
     Private Sub stoptimer()
         Me.Timer1.Enabled = False
         Me.ProgressBar1.Visible = False
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
     Private Sub start()
         If System.IO.Directory.Exists(txt_ordner.Text) Then
             Dim jgpEncoder As ImageCodecInfo = GetEncoder(ImageFormat.Jpeg)
@@ -64,6 +90,11 @@ Public Class Form1
         End If
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub btn_openfd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_openfd.Click
         Dim a As System.Windows.Forms.DialogResult = FolderBrowserDialog1.ShowDialog
         If a = System.Windows.Forms.DialogResult.OK Then
@@ -73,14 +104,29 @@ Public Class Form1
         End If
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub btn_hide_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_hide.Click
         Me.Visible = False
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub NotifyIcon1_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles NotifyIcon1.DoubleClick
         Me.Visible = True
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         Try
             If timercounter = CInt(txt_interval.Text) Then
@@ -97,11 +143,21 @@ Public Class Form1
         ProgressBar1.Value = timercounter
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Timer1.Interval = 1000
         Me.txt_ordner.Text = My.Settings.speicherpfad
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="format"></param>
+    ''' <returns></returns>
     Private Function GetEncoder(ByVal format As ImageFormat) As ImageCodecInfo
         Dim codecs As ImageCodecInfo() = ImageCodecInfo.GetImageDecoders()
 
@@ -114,6 +170,11 @@ Public Class Form1
         Return Nothing
     End Function
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub NotifyIcon1_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
         Me.Visible = True
     End Sub
