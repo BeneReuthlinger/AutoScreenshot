@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.10
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Auto-Screenshots", "WindowsApplication1\Auto-Screenshots.vbproj", "{45847691-2E19-4CA3-897D-110D86C636F4}"
 EndProject
 Global
@@ -16,5 +18,17 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9EAEF56-5B5B-4545-AA52-ACAF425C1333}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://me-projekte.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WindowsApplication1\\Auto-Screenshots.vbproj
+		SccProjectName1 = WindowsApplication1
+		SccLocalPath1 = WindowsApplication1
 	EndGlobalSection
 EndGlobal

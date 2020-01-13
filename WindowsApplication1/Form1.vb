@@ -10,12 +10,12 @@ Public Class Form1
     Private timercounter As Integer = 0
 
     ''' <summary>
-    ''' 
+    ''' bitmap
     ''' </summary>
     Private b As Bitmap = Nothing
 
     ''' <summary>
-    ''' 
+    ''' Screenshot erstellen
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -30,7 +30,7 @@ Public Class Form1
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Stop Button klicken
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -39,7 +39,7 @@ Public Class Form1
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Timer starten
     ''' </summary>
     Private Sub starttimer()
         Try
@@ -61,7 +61,7 @@ Public Class Form1
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Screenshot erstellen und speichern
     ''' </summary>
     Private Sub start()
         If System.IO.Directory.Exists(txt_ordner.Text) Then
@@ -144,7 +144,7 @@ Public Class Form1
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' beim Formular laden
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -154,7 +154,7 @@ Public Class Form1
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Encoder für Bildkonvertierung
     ''' </summary>
     ''' <param name="format"></param>
     ''' <returns></returns>
